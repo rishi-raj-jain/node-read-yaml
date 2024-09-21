@@ -9,7 +9,7 @@
     "test": "mocha test.js",
     "test:cov": "nyc npm run test",
     "test:loop": "while npm test --silent; do :; done",
-    "preinstall": "unlink-self 2>&1 | echo unlink-self"
+    "preinstall": "node -e \"try { require('unlink-self')() } catch (e) { console.log('unlink-self not available') }\""
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
