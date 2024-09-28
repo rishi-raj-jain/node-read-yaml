@@ -3,7 +3,7 @@
 const { writeFileSync, unlinkSync } = require('fs');
 const { resolve } = require('path');
 const { expect } = require('chai');
-const read = require('node-read-yaml');
+const read = require('.');
 const filename = resolve(__dirname, '.test.yml');
 const yamlText1 = `
 _id: 0g3043l9tm
